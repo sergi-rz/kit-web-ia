@@ -31,6 +31,15 @@ MEJORAS.md para otro día. Ninguna mejora se implementa sin pasar por aquí —
 «aprovechar que estamos» sin aprobación es exactamente la clase de cambio
 silencioso que este método existe para impedir.
 
+Las mejoras marcadas **[CONTENIDO]** tienen un paso más: si el usuario las
+aprueba, no se pueden implementar inventando — el material tiene que salir de
+él. Para cada una, hazle las preguntas correspondientes de la Parte 1 de
+`1-entrevista.md` (solo las que apliquen a esa mejora: si falta el «cómo se
+trabaja conmigo», la pregunta 6; si faltan pruebas, la 3 y la 4…). Las
+respuestas entran al INVENTARIO.md con su origen `[respuesta del usuario]`, y
+lo que se quede sin material se marca PENDIENTE, como siempre. Así la web
+nueva puede ser mejor que la vieja sin que nada se haya inventado.
+
 ### A3 · La dirección de diseño
 
 Pregunta antes de proponer:

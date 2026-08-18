@@ -128,6 +128,21 @@ Además de todo lo anterior:
 - Documenta la configuración del plugin de SEO (titles, plantillas de metas,
   redirecciones, sitemap) exportándola o copiándola, porque no viaja sola.
 
+## Parte 3 · Lo que la web no cuenta (contraste con la entrevista)
+
+Que haya una web que auditar no significa que la web esté completa. Con el
+inventario técnico hecho, contrasta el **contenido** de la web contra los
+puntos 1 a 7 de `1-entrevista.md`, como si la web fuera la respuesta del
+negocio a esa entrevista: ¿queda claro qué vende y a quién? ¿el «por qué él»
+tiene pruebas (años, casos, cifras)? ¿hay material real (testimonios con
+nombre, casos) o huecos? ¿cada página tiene clara la acción que pide al
+visitante? ¿se explica cómo se trabaja con él (proceso, plazos, objeciones)?
+
+Cada hueco que encuentres va a `docs/MEJORAS.md` marcado **[CONTENIDO]**, en
+una línea como el resto: qué falta, qué gana si se arregla, qué costaría.
+No entrevistes todavía al usuario ni redactes nada: aquí solo se detecta. La
+entrevista parcial, si él aprueba esas mejoras, ocurre en la fase 2.
+
 ## Formato de salida
 
 `docs/INVENTARIO.md` con las dos partes, y al final una sección **RIESGOS**
