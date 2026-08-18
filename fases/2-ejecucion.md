@@ -40,7 +40,19 @@ respuestas entran al INVENTARIO.md con su origen `[respuesta del usuario]`, y
 lo que se quede sin material se marca PENDIENTE, como siempre. Así la web
 nueva puede ser mejor que la vieja sin que nada se haya inventado.
 
-### A3 · La dirección de diseño
+### A3 · Las ampliaciones
+
+Pregunta al usuario qué debe tener la web nueva que la vieja no tiene: páginas
+nuevas, funcionalidades (una página de captación, un calendario de reservas,
+un formulario distinto…), servicios que hoy no aparecen. Para cada ampliación
+que pida: defínela con él (qué hace, qué URL tendrá, qué integraciones
+necesita, de dónde sale su contenido — el material factual lo pone él, como
+siempre) y añádela al INVENTARIO.md marcada **[AMPLIACIÓN]**. Desde ese
+momento es una promesa más: se construye y se verifica en la fase 3 como todo
+lo demás. Las ampliaciones también pueden llegar a mitad de desarrollo; el
+circuito es el mismo — se define, se apunta, y solo entonces se construye.
+
+### A4 · La dirección de diseño
 
 Pregunta antes de proponer:
 
@@ -62,7 +74,7 @@ Elegir un mockup y tirar es rápido; empeñarse en una idea propia muy concreta
 multiplica el tiempo. Es legítimo, pero el usuario debe saber que ese coste es
 una elección, no una obligación del método.
 
-### A4 · El plan
+### A5 · El plan
 
 Antes de escribir código, entrega:
 

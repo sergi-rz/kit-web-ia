@@ -23,9 +23,10 @@ Estados posibles, solo estos tres:
   sección CAMBIOS APROBADOS del inventario. Referénciala. Si no hay entrada,
   es ROTO.
 
-Los puntos marcados **[MEJORA]** se comprueban igual que el resto: en su día
-eran opcionales, pero al aprobarse se volvieron promesas. Una mejora aprobada
-y no implementada es ROTO, no «bueno, era un extra».
+Los puntos marcados **[MEJORA]** y **[AMPLIACIÓN]** se comprueban igual que
+el resto: en su día eran opcionales, pero al aprobarse se volvieron promesas.
+Una mejora o ampliación aprobada y no implementada es ROTO, no «bueno, era un
+extra».
 
 Reglas:
 
