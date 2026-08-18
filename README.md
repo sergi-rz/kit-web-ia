@@ -1,4 +1,4 @@
-# kit-web
+# Kit Web IA
 
 Un kit para rehacer tu web (o hacerla de cero) con un agente de IA — Claude
 Code, Codex o equivalente — sin perder por el camino lo que hoy te trae
@@ -20,7 +20,7 @@ copia de seguridad), qué va a auditar, y qué decisiones son tuyas.
 ## Qué hay dentro
 
 ```
-kit-web/
+kit-web-ia/
 ├── AGENTS.md        ← las reglas del proyecto (la fuente de verdad)
 ├── CLAUDE.md        ← la versión para Claude Code (importa AGENTS.md)
 ├── fases/

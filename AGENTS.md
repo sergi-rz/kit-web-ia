@@ -1,4 +1,4 @@
-# Kit para rehacer (o crear) tu web con un agente de IA
+# Kit Web IA — rehacer (o crear) tu web con un agente de IA
 
 Este fichero es **la fuente de verdad del proyecto**. Cualquier agente que
 trabaje en esta carpeta (Claude Code, Codex o equivalente) debe leerlo entero
@@ -18,7 +18,7 @@ agente aquí, con todo el contexto ya en los ficheros.
 ## La estructura
 
 ```
-kit-web/
+kit-web-ia/
 ├── AGENTS.md        ← este fichero: las reglas del proyecto
 ├── CLAUDE.md        ← importa este fichero (para Claude Code)
 ├── fases/
