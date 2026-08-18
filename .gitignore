@@ -1,0 +1,8 @@
+# Credenciales: nunca se versionan
+.secrets/
+
+# El código descargado de tu web actual puede contener claves dentro
+# (wp-config.php, SMTP...). Mejor fuera de cualquier repositorio.
+web-vieja/*
+!web-vieja/AGENTS.md
+!web-vieja/CLAUDE.md
