@@ -16,7 +16,14 @@ El resultado de esta fase son dos ficheros:
 ## Paso 0 · Onboarding: lo que el agente necesita del usuario
 
 Antes de auditar nada, repasa esta lista con el usuario, punto por punto, y no
-sigas hasta tenerla cerrada:
+sigas hasta tenerla cerrada. Y «auditar nada» incluye la web publicada: aunque
+ya tengas la URL, no adelantes una revisión externa (descargar el HTML
+público, recorrer URLs, analizar cabeceras) mientras esperas los accesos. La
+auditoría se hace una sola vez, con el código y la web en vivo delante a la
+vez; empezar por la mitad externa produce un inventario a medias que luego hay
+que rehacer y mezclar. Solo si el usuario no puede dar ningún acceso al código
+se audita únicamente lo público — dejándolo apuntado como límite en el
+inventario.
 
 1. **Copia de seguridad.** Confirma que existe una copia completa de ficheros
    y base de datos, hecha hoy. Si no existe, guíale para hacerla antes de
