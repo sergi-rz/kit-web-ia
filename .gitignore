@@ -6,3 +6,10 @@
 web-vieja/*
 !web-vieja/AGENTS.md
 !web-vieja/CLAUDE.md
+
+# Exports de base de datos y copias de seguridad, caigan donde caigan
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+.env

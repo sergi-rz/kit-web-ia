@@ -6,6 +6,8 @@ Esta carpeta la escribe el agente durante las fases. Aquí acaban:
   CAMBIOS APROBADOS y los puntos [MEJORA] que se aprueben.
 - `MEJORAS.md` — las oportunidades detectadas, pendientes de decisión.
 - `DECISIONES.md` — toda decisión tomada, con fecha y motivo.
+- `PLAN.md` — las plantillas de la web y su estado, como checklist viva
+  (fase 2).
 - `mockups/` — las pruebas de diseño de la fase 2.
 
 Nada de esta carpeta se publica en el servidor. Se conserva para siempre: es

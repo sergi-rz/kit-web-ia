@@ -26,7 +26,7 @@ kit-web-ia/
 │   ├── 1-entrevista.md   ← si NO hay web previa (sustituye a la auditoría)
 │   ├── 2-ejecucion.md    ← el desarrollo, con decisiones y mockups antes
 │   └── 3-verificacion.md ← comprobar la web nueva contra el inventario
-├── docs/            ← lo que el agente escribe: INVENTARIO, MEJORAS, DECISIONES, mockups
+├── docs/            ← lo que el agente escribe: INVENTARIO, MEJORAS, DECISIONES, PLAN, mockups
 ├── web-vieja/       ← el código y la BD de la web actual · SOLO LECTURA
 ├── web-nueva/       ← la web que se construye · LO ÚNICO QUE SE PUBLICA
 └── .secrets/        ← credenciales (FTP, BD…) · ni se versiona ni se sube ni se cita

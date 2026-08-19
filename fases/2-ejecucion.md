@@ -68,19 +68,28 @@ Pregunta antes de proponer:
    choca con el inventario, lo dices y decide él.
 
 Si no hay diseño cerrado: con sus referencias, prepara **2 o 3 mockups** de la
-página principal en `docs/mockups/` — HTML autocontenido, maquetado con el
-contenido real del inventario, nunca con textos de relleno — y que elija línea.
+página principal en `docs/mockups/` — HTML autocontenido que pueda abrir en su
+navegador, maquetado con el contenido real del inventario, nunca con textos de
+relleno — y que elija línea. La línea elegida no se queda en «el mockup 2»: se
+documenta en `docs/DECISIONES.md` como sistema — colores, tipografías, y los
+criterios de sus componentes — porque las demás plantillas se construirán
+contra esa descripción, no reinterpretando el mockup cada vez.
 Elegir un mockup y tirar es rápido; empeñarse en una idea propia muy concreta
 multiplica el tiempo. Es legítimo, pero el usuario debe saber que ese coste es
 una elección, no una obligación del método.
 
 ### A5 · El plan
 
-Antes de escribir código, entrega:
+Antes de escribir código, escribe en `docs/PLAN.md`:
 
 - La lista de plantillas que tendrá la web (qué páginas comparten estructura).
-- Un plan de trabajo por plantillas, indicando qué puntos del inventario
-  afectan a cada una.
+- Un plan de trabajo por plantillas, como checklist, indicando qué puntos del
+  inventario afectan a cada una.
+
+Ese fichero es el estado vivo del desarrollo: se marca cada plantilla al
+terminarla. Una sesión nueva que entre a mitad de la Mitad B debe poder saber
+qué está hecho, qué está a medias y qué falta leyendo solo PLAN.md, sin
+reconstruirlo desde DECISIONES.md.
 
 ## Mitad B · El desarrollo
 
@@ -103,6 +112,12 @@ Antes de escribir código, entrega:
    donde estaban, midiendo los mismos eventos.
 7. **Rendimiento y accesibilidad**: regla 7 del AGENTS.md. Una web nueva que
    carga peor que la vieja es una web rota aunque sea más bonita.
+8. **Las imágenes se migran optimizándose**: toda imagen que pase de
+   `web-vieja/` a `web-nueva/` se convierte a formato moderno (WebP o AVIF,
+   con el peso del inventario como techo), se dimensiona según su contenedor
+   y se guarda con estructura limpia (por ejemplo `assets/img/`), conservando
+   el alt del inventario. Las rutas nuevas de las imágenes no rompen la regla
+   de URLs: esa regla protege las páginas.
 
 ### El stack
 
@@ -137,6 +152,7 @@ medio WordPress son plugins haciendo cosas que nadie recuerda.
 ### El ritmo de trabajo
 
 Cada vez que termines una plantilla, di qué puntos del inventario le aplicaban
-y cómo los has conservado. Y mantén `docs/DECISIONES.md` al día: cada decisión
-que surja por el camino (un cambio aprobado, un texto pendiente, una duda
-resuelta) se apunta en el momento, no al final.
+y cómo los has conservado, y márcala en `docs/PLAN.md`. Y mantén
+`docs/DECISIONES.md` al día: cada decisión que surja por el camino (un cambio
+aprobado, un texto pendiente, una duda resuelta) se apunta en el momento, no
+al final.

@@ -32,6 +32,12 @@ Reglas:
 
 - Nada de «parece correcto». Cada CONSERVADO lleva la prueba: la URL
   comprobada, el fichero leído, el valor encontrado.
+- Si tu entorno permite ejecutar comandos, no verifiques solo leyendo código:
+  levanta la web nueva en un servidor local (`php -S localhost:8000` basta
+  para este stack), recorre las URLs del inventario comprobando su código de
+  estado y los enlaces internos, y compara el peso de las imágenes críticas
+  contra el inventario. Lo comprobado en vivo pesa más que lo deducido del
+  código.
 - Comprueba las URLs de una en una contra la lista del inventario: código de
   estado de cada una y que el contenido corresponde. Las redirecciones del
   inventario siguen respondiendo 301 hacia su destino correcto.

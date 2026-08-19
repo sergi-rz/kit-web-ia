@@ -36,8 +36,10 @@ kit-web-ia/
 La idea de fondo: en vez de un prompt largo que se pierde cuando la
 conversación se alarga, las directrices viven en ficheros que el agente
 recarga siempre, y **toda decisión queda escrita** en `docs/`. La carpeta
-entera es tu proyecto: guárdala, y los cambios futuros los pides abriendo el
-agente ahí dentro, con todo el contexto.
+entera es tu proyecto: guárdala, porque después de publicar no hay panel de
+administración — esta carpeta hace de él. Cualquier cambio futuro («súbeme el
+precio de tal servicio», «añade este testimonio») se pide abriendo el agente
+aquí dentro, con todo el contexto ya en los ficheros.
 
 ## Para quién es (y para quién no)
 

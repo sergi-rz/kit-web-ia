@@ -77,8 +77,9 @@ ficheros y valores concretos tal como están hoy.
    metas robots página a página: si algo está hoy en noindex o nofollow, es
    una decisión que hay que conservar, no un descuido que perder.
 9. **Imágenes.** Nombres de fichero y atributos alt de las imágenes de
-   contenido, y cómo se sirven: formato, srcset, lazy-loading, CDN si lo hay.
-   Si hoy están optimizadas, la web nueva no puede servirlas peor.
+   contenido, y cómo se sirven: peso aproximado, formato, srcset,
+   lazy-loading, CDN si lo hay. Si hoy están optimizadas, la web nueva no
+   puede servirlas peor.
 10. **Página 404.** Existe, qué devuelve (código de estado real) y qué muestra.
 11. **Metas sociales.** Open Graph y Twitter Cards de cada plantilla. Se
     pierden en casi todos los rediseños, y son cómo se ve la web al
@@ -101,7 +102,9 @@ ficheros y valores concretos tal como están hoy.
     en teléfono, reserva): no solo los códigos, también qué miden. Se caen en
     cada rediseño del mundo y nadie lo nota hasta el mes siguiente.
 17. **Cookies y consentimiento.** Qué banner hay, qué bloquea hasta aceptar,
-    qué textos legales enlaza.
+    qué textos legales enlaza. Las páginas legales (aviso legal, privacidad,
+    cookies) entran al inventario como lo que son: material factual — se
+    migran tal cual o las renueva el usuario, nunca las redacta el agente.
 18. **Correos transaccionales.** Qué emails manda la web (confirmaciones,
     avisos del formulario), desde qué dirección y por qué vía (SMTP, API,
     función del servidor).
@@ -173,7 +176,10 @@ puntos 1 a 7 de `1-entrevista.md`, como si la web fuera la respuesta del
 negocio a esa entrevista: ¿queda claro qué vende y a quién? ¿el «por qué él»
 tiene pruebas (años, casos, cifras)? ¿hay material real (testimonios con
 nombre, casos) o huecos? ¿cada página tiene clara la acción que pide al
-visitante? ¿se explica cómo se trabaja con él (proceso, plazos, objeciones)?
+visitante, y en la portada esa acción y la propuesta de valor se ven en el
+primer pantallazo o hay que ir a buscarlas? ¿la prueba social está donde se
+toma la decisión o escondida? ¿se explica cómo se trabaja con él (proceso,
+plazos, objeciones)?
 
 Cada hueco que encuentres va a `docs/MEJORAS.md` marcado **[CONTENIDO]**, en
 una línea como el resto: qué falta, qué gana si se arregla, qué costaría.
@@ -186,7 +192,10 @@ entrevista parcial, si él aprueba esas mejoras, ocurre en la fase 2.
 con las tres cosas que más probabilidad tienen de romperse en este rediseño
 concreto y por qué, citando el punto del inventario y el fichero donde viven.
 Cada punto del inventario debe poder responderse después con «conservado /
-roto / cambiado a propósito».
+roto / cambiado a propósito», y llevar una numeración estable: la fase 3 (y
+las secciones CAMBIOS APROBADOS y [MEJORA]/[AMPLIACIÓN]) referenciarán los
+puntos por su número, así que no se renumeran al añadir cosas — lo nuevo se
+añade al final de su parte.
 
 Y `docs/MEJORAS.md` con las carencias vistas por el camino: schemas que
 faltan, titles flojos, páginas sin meta description, imágenes sin alt, sin
