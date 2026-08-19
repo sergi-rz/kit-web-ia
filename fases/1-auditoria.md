@@ -58,6 +58,15 @@ inventario.
 Cada punto tiene que ser comprobable: nada de generalidades, cita URLs,
 ficheros y valores concretos tal como están hoy.
 
+Y cada punto se comprueba contra **las dos fuentes, siempre**: el código
+descargado en `web-vieja/` y la web publicada, escrapeada de verdad (pidiendo
+sus URLs y analizando el HTML que sirve). No son redundantes: el código dice
+lo que la web intenta hacer; el HTML servido dice lo que hace — enlaces rotos,
+imágenes que no cargan, recursos que fallan, redirecciones inesperadas y todo
+lo que inyectan el CMS o los plugins solo se ve en vivo. Lo que encuentres
+roto en vivo (404 internos, imágenes caídas) va a `docs/MEJORAS.md`: son
+averías de la web actual, no puntos a conservar.
+
 1. **URLs.** Lista todas las URLs de la web (sitemap, enlaces internos, y las
    que encuentres en el código). Esta lista es sagrada: en el rediseño se
    conservan todas. Si alguna no se pudiera conservar, necesitará una
