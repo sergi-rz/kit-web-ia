@@ -39,7 +39,11 @@ sigas hasta tenerla cerrada:
    pegue en ficheros del proyecto.
 5. **Descarga.** Con el acceso resuelto, descarga el código completo (y el
    export de BD) a `web-vieja/`. A partir de aquí trabajas sobre esa copia.
-6. **Encaje del kit.** Comprueba lo de «Para quién NO es este kit» del
+6. **El hosting.** Pregúntale qué hosting tiene y desde qué panel lo gestiona
+   (cPanel, Plesk, panel propio). No le preguntes más que eso: qué servidor
+   corre por debajo no tiene por qué saberlo él — lo averiguas tú en la
+   Parte 2b con esas pistas.
+7. **Encaje del kit.** Comprueba lo de «Para quién NO es este kit» del
    AGENTS.md y, si aplica, dilo ahora.
 
 ## Parte 1 · SEO: lo que sostiene las visitas
@@ -52,8 +56,9 @@ ficheros y valores concretos tal como están hoy.
    conservan todas. Si alguna no se pudiera conservar, necesitará una
    redirección 301.
 2. **Redirecciones existentes.** Busca redirecciones ya configuradas
-   (.htaccess, configuración del servidor, código). Se pierden en casi todos
-   los rediseños y nadie se entera hasta meses después.
+   (.htaccess, configuración del servidor, código), y anota en qué mecanismo
+   vive cada una (ver Parte 2b). Se pierden en casi todos los rediseños y
+   nadie se entera hasta meses después.
 3. **Idiomas.** Si la web tiene más de un idioma: qué URLs tiene cada versión,
    cómo están enlazadas entre sí y si hay etiquetas hreflang. Documenta el
    esquema exacto.
@@ -110,6 +115,38 @@ ficheros y valores concretos tal como están hoy.
 21. **Prueba social embebida.** Reseñas de Google u otros widgets que carguen
     de un servicio externo: de dónde vienen y dónde se muestran.
 
+## Parte 2b · El servidor (esto el usuario no tiene por qué saberlo)
+
+El usuario normal no sabe si su hosting usa Apache, nginx o LiteSpeed, y no
+pasa nada: no se lo preguntes, averígualo tú. Importa por una razón muy
+concreta: decide **dónde se escriben las redirecciones, las cabeceras y el
+forzado de HTTPS** de la web nueva. Una regla escrita en un fichero que el
+servidor ignora no da error: simplemente no hace nada.
+
+22. **Qué servidor sirve la web.** Pistas, de más a menos fiable: si existe
+    `.htaccess` en el código descargado **y sus reglas se cumplen en la web
+    publicada** (una redirección definida ahí que funciona al pedirla con
+    `curl -sI` demuestra que el servidor lo respeta), las cabeceras de una
+    respuesta real (`Server`, `x-powered-by` y compañía), y la documentación
+    pública del hosting que te dijo el usuario en el paso 0. Conclusión que
+    va al inventario, con su prueba: en Apache y LiteSpeed el `.htaccess`
+    funciona; en nginx se ignora en silencio y la configuración real vive
+    donde el usuario no llega por FTP — ahí las redirecciones irán por el
+    panel del hosting o por PHP.
+23. **Proxies y CDN por delante.** Comprueba si hay un Cloudflare u otro CDN
+    delante (cabeceras `cf-ray` / `x-cache`, los DNS del dominio). Si lo hay,
+    parte de las redirecciones, la caché y el certificado pueden vivir ahí y
+    no en el hosting: hay que saberlo antes de tocar nada, y habrá que purgar
+    su caché al publicar.
+24. **Caché y compresión.** Qué capas de caché están activas hoy (plugin,
+    caché del hosting, CDN) y qué cabeceras sirven páginas y assets
+    (`Cache-Control`, `Expires`, gzip/brotli). La web nueva no puede servirse
+    peor que la vieja.
+25. **HTTPS y dominio canónico.** Cómo se fuerza hoy el HTTPS y la versión
+    con o sin www, y en qué mecanismo vive esa redirección (¿.htaccess?
+    ¿panel? ¿CDN?). Es la redirección que más veces se pierde sin que nadie
+    la eche de menos hasta que Google duplica la web entera.
+
 ## Si la web actual es un WordPress
 
 Además de todo lo anterior:
@@ -145,7 +182,7 @@ entrevista parcial, si él aprueba esas mejoras, ocurre en la fase 2.
 
 ## Formato de salida
 
-`docs/INVENTARIO.md` con las dos partes, y al final una sección **RIESGOS**
+`docs/INVENTARIO.md` con todas las partes, y al final una sección **RIESGOS**
 con las tres cosas que más probabilidad tienen de romperse en este rediseño
 concreto y por qué, citando el punto del inventario y el fichero donde viven.
 Cada punto del inventario debe poder responderse después con «conservado /

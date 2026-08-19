@@ -112,6 +112,16 @@ sin frameworks ni compilación, lista para un hosting compartido normal.
 `web-nueva/` debe quedar **autocontenida**: subir su contenido a un servidor
 es todo lo que hace falta para que la web funcione.
 
+Las **redirecciones, cabeceras de caché y forzado de HTTPS** se escriben en el
+mecanismo que el servidor del inventario respeta de verdad (Parte 2b de la
+auditoría): `.htaccess` si es Apache o LiteSpeed; si es nginx sin acceso a la
+configuración, el panel del hosting o el PHP mínimo del stack. Una regla en un
+fichero que el servidor ignora no da error — simplemente no hace nada — así
+que este punto se decide con el inventario delante, no por costumbre, y se
+verifica en producción en la fase 3. (Con web desde cero, el servidor se
+identifica igual — cabeceras, panel, documentación del hosting — en cuanto el
+usuario tenga hosting elegido, y antes de escribir estas reglas.)
+
 ### Si el origen es WordPress
 
 La web actual es un WordPress y la nueva no lo será. Del inventario, di qué

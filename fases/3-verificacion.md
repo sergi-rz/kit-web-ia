@@ -95,9 +95,17 @@ Solo con la verificación limpia y las pruebas manuales hechas:
   probar, y hacer el cambio definitivo al final. La web vieja no se borra del
   servidor hasta que la nueva lleve unos días funcionando — y la copia de
   seguridad de la fase 1 no se toca en ningún caso.
-- Tras el cambio: repasa que robots.txt y sitemap apuntan a lo nuevo, y que
-  ninguna URL del inventario responde distinto en producción de como lo hacía
-  en la verificación.
+- Tras el cambio, **purga todas las capas de caché del inventario** (caché
+  del hosting, CDN si lo hay): el clásico «he subido la web nueva y sigue
+  saliendo la vieja» casi siempre es esto, no un fallo de la subida.
+- Y comprueba redirecciones, forzado de HTTPS y cabeceras de caché **con
+  peticiones reales contra producción** (`curl -sI` a las URLs del
+  inventario): en local no se puede saber si el servidor respeta el fichero
+  donde están escritas (Parte 2b del inventario) — una regla ignorada no da
+  error, simplemente no actúa.
+- Repasa que robots.txt y sitemap apuntan a lo nuevo, y que ninguna URL del
+  inventario responde distinto en producción de como lo hacía en la
+  verificación.
 
 ## Después
 
