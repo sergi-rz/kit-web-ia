@@ -44,8 +44,16 @@ inventario.
 4. **Credenciales a `.secrets/`.** Todo lo que te dé (FTP, BD) se guarda en
    ficheros dentro de `.secrets/`, nunca en otro sitio. Recuérdale que no las
    pegue en ficheros del proyecto.
-5. **Descarga.** Con el acceso resuelto, descarga el código completo (y el
-   export de BD) a `web-vieja/`. A partir de aquí trabajas sobre esa copia.
+5. **Descarga.** Con el acceso resuelto, localiza primero **cuál es la carpeta
+   raíz de la web** en el servidor: la que el dominio sirve de verdad. La
+   conexión FTP no siempre aterriza en ella — muchas cuentas entran en la home
+   del servidor, con la web dentro de `public_html/`, `www/`, `httpdocs/` o
+   similar. Compruébalo con evidencia, no por el nombre de la carpeta: elige
+   un fichero reconocible de la candidata (una imagen, un CSS) y pide su URL
+   en el dominio; si responde, es esa. Deja la ruta apuntada en el fichero de
+   `.secrets/` junto a las credenciales — la fase 3 la necesita para publicar
+   en el sitio correcto — y descarga desde ahí el código completo (y el export
+   de BD) a `web-vieja/`. A partir de aquí trabajas sobre esa copia.
 6. **El hosting.** Pregúntale qué hosting tiene y desde qué panel lo gestiona
    (cPanel, Plesk, panel propio). No le preguntes más que eso: qué servidor
    corre por debajo no tiene por qué saberlo él — lo averiguas tú en la

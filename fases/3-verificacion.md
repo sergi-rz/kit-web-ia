@@ -97,10 +97,35 @@ Solo con la verificación limpia y las pruebas manuales hechas:
   subida — con su aprobación explícita en ese momento, no como parte
   automática de la fase. La alternativa: el usuario sube `web-nueva/` él
   mismo con su cliente FTP.
-- El camino prudente si conviven web vieja y nueva: subir a una subcarpeta,
-  probar, y hacer el cambio definitivo al final. La web vieja no se borra del
-  servidor hasta que la nueva lleve unos días funcionando — y la copia de
-  seguridad de la fase 1 no se toca en ningún caso.
+- **Antes de subir nada, confirma la carpeta de destino.** La ruta de la raíz
+  de la web debería estar apuntada en `.secrets/` desde la fase 1; si no está
+  o está en blanco, no des por hecho que la carpeta donde aterriza la conexión
+  FTP es la buena — muchas cuentas entran en la home del servidor, no en la
+  raíz que sirve el dominio. Demuéstralo antes de tocar nada: los ficheros de
+  esa carpeta tienen que coincidir con lo descargado en `web-vieja/`, o, si el
+  servidor está vacío, sube un fichero de prueba minúsculo y comprueba que
+  responde en el dominio (y bórralo). Si no puedes demostrarlo, para y
+  pregunta al usuario. Subir la web a la carpeta equivocada no da error: deja
+  el dominio sirviendo lo viejo y los ficheros nuevos perdidos por el
+  servidor.
+- **La web vieja y la nueva no se mezclan.** Subir encima de lo que hay
+  sobrescribe unos ficheros, deja otros obsoletos conviviendo con los nuevos,
+  y limpiar eso después es un follón. En su lugar: mueve todo lo que haya en
+  la carpeta raíz a una subcarpeta de archivo con fecha (por ejemplo
+  `_web-anterior-AAAA-MM-DD/`, con la fecha del día) y sube el contenido de `web-nueva/` a la raíz
+  ya vacía, todo seguido para que el corte sea mínimo. Así la web vieja queda
+  localizada en un solo sitio, y el usuario decide luego si se la descarga o
+  la borra — pero no se borra del servidor hasta que la nueva lleve unos días
+  funcionando, y la copia de seguridad de la fase 1 no se toca en ningún caso.
+  Esa subcarpeta cuelga de la raíz pública, así que hay que cerrarla al
+  exterior: si el servidor respeta `.htaccess` (Parte 2b del inventario), un
+  `Deny from all` dentro; si no, mejor moverla fuera de la raíz si la cuenta
+  FTP alcanza un nivel por encima. Y no forma parte de la web nueva: queda
+  fuera de la verificación y del sitemap.
+- El camino prudente si el usuario quiere probar en el servidor antes del
+  cambio: subir a una subcarpeta o subdominio de pruebas, revisar, y hacer el
+  cambio definitivo al final (el archivado de la vieja se hace igual en ese
+  momento).
 - Tras el cambio, **purga todas las capas de caché del inventario** (caché
   del hosting, CDN si lo hay): el clásico «he subido la web nueva y sigue
   saliendo la vieja» casi siempre es esto, no un fallo de la subida.
