@@ -43,6 +43,11 @@ Reglas:
   parámetro difiere de la respuesta sin él. Si son idénticas, lo más probable
   es que el catch-all del rewrite esté descartando la query string por falta
   del flag QSA (ver fase 2) — no un problema de caché.
+- **Lo legal de serie** (fase 2) se comprueba, no se supone: en una carga
+  limpia sin aceptar nada, ninguna petición ni cookie de analítica o píxeles
+  (si hay banner, bloquea de verdad); cada formulario con datos personales
+  lleva su casilla sin premarcar y la información de primera capa visible;
+  y las páginas legales responden 200 y están enlazadas desde el pie.
 - Comprueba las URLs de una en una contra la lista del inventario: código de
   estado de cada una y que el contenido corresponde. Las redirecciones del
   inventario siguen respondiendo 301 hacia su destino correcto.

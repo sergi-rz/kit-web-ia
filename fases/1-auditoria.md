@@ -129,6 +129,21 @@ averías de la web actual, no puntos a conservar.
     qué textos legales enlaza. Las páginas legales (aviso legal, privacidad,
     cookies) entran al inventario como lo que son: material factual — se
     migran tal cual o las renueva el usuario, nunca las redacta el agente.
+    Y además de inventariar lo que hay, **busca lo que falta**: las carencias
+    RGPD son de lo más común en webs pequeñas y el usuario no suele saber ni
+    que existen. Comprueba al menos: si hay analítica o píxeles cargando
+    **antes** de que nadie acepte nada (se ve en vivo: qué peticiones y
+    cookies dispara la página recién cargada) o un banner decorativo que no
+    bloquea nada; formularios que recogen datos **sin casilla de
+    consentimiento**, con la casilla premarcada, o **sin la información básica
+    de primera capa** (responsable, finalidad, legitimación, destinatarios,
+    derechos, enlace a la política) visible junto al formulario; páginas
+    legales que no existen, o que no cuadran con lo que la web hace de verdad
+    (una política que no menciona la newsletter externa o la analítica que sí
+    usa); y campos que piden más datos de los necesarios. Cada carencia va a
+    `docs/MEJORAS.md` marcada **[LEGAL]**. Tú detectas y estructuras; los
+    textos legales los pone el usuario o su asesor — esto no es asesoría
+    jurídica y conviene decírselo así.
 18. **Correos transaccionales.** Qué emails manda la web (confirmaciones,
     avisos del formulario), desde qué dirección y por qué vía (SMTP, API,
     función del servidor).

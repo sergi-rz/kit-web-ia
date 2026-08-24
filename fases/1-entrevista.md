@@ -62,7 +62,11 @@ porqué.
     convención de nombres de fichero y alt de las imágenes.
 14. **Integraciones.** Qué hace falta montar y con qué servicio: formulario (a
     dónde envía), captación de correos, pagos si los hay, analítica, cookies y
-    textos legales.
+    textos legales. De cada sitio donde se recojan datos personales, deja
+    apuntado quién es el responsable, para qué se recogen y a qué servicio van
+    a parar: la fase 2 construye con eso el consentimiento y la información de
+    primera capa de cada formulario («Lo legal, de serie»), y los textos los
+    aprueba el usuario.
 
 ## Formato de salida
 

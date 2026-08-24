@@ -146,6 +146,37 @@ sin parámetro, idéntica, y parece un problema de caché que ninguna cabecera
 arregla. Cuando un parámetro GET «no funcione», comprueba el catch-all antes
 de culpar a la caché.
 
+### Lo legal, de serie
+
+La web nueva no hereda las carencias [LEGAL] que la auditoría haya apuntado en
+`MEJORAS.md`: se corrigen al construir, porque cuestan casi nada en obra y un
+disgusto después. Lo que sale de serie en toda web de este kit:
+
+- **Cada formulario que recoja datos personales** lleva casilla de
+  consentimiento **sin premarcar** y, visible junto a ella, la información
+  básica de primera capa: responsable, finalidad, legitimación, destinatarios
+  (si los datos van a un tercero — newsletter, CRM — se dice), derechos y
+  enlace a la política de privacidad. La estructura la montas tú; los nombres,
+  correos y textos los aprueba el usuario (regla 2: nada factual se inventa).
+- **Banner de cookies solo si hace falta, y que bloquee de verdad.** Con este
+  stack, lo primero es intentar no necesitarlo: sin cookies no esenciales no
+  hay banner que poner, y eso también se le dice al usuario. Si hay analítica
+  o píxeles con cookies, sus scripts **no se cargan hasta que el visitante
+  acepta** — un banner que se cierra y deja todo cargado es decoración. En
+  este stack basta JS plano: nada de meter un gestor de consentimiento de
+  terceros por costumbre.
+- **Las páginas legales existen y se enlazan desde el pie** de todas las
+  páginas. Su contenido es material factual (punto 17 de la auditoría): se
+  migra o lo renueva el usuario, y si lo que la web nueva hace ya no cuadra
+  con lo que dicen (una newsletter nueva, analítica distinta), se le avisa
+  para que los actualice — tú no redactas textos legales.
+- **Datos mínimos**: los formularios piden lo que la finalidad necesita, no
+  más. Cada campo extra se justifica o se cae.
+
+Y dicho una vez para no repetirlo: esto ayuda a cumplir, pero **no es
+asesoría jurídica** — si el negocio maneja datos sensibles o vende online,
+recomiéndale pasar el resultado por un profesional.
+
 ### Si el origen es WordPress
 
 La web actual es un WordPress y la nueva no lo será. Del inventario, di qué
