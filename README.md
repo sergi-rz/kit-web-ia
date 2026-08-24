@@ -4,7 +4,7 @@ Un kit para rehacer tu web (o hacerla de cero) con un agente de IA — Claude
 Code, Codex o equivalente — sin perder por el camino lo que hoy te trae
 visitas o dinero.
 
-Lo enseño en funcionamiento en este vídeo: **[PENDIENTE: enlace al vídeo]**.
+Lo enseño en funcionamiento en este vídeo: **[Rehago mi web con IA sin tocar código ni perder lo que ya funciona](https://www.youtube.com/watch?v=ptXv8fTC2zM)**.
 Recomiendo verlo antes de usar el kit: cada proyecto tiene sus matices y ahí
 explico cómo aplicarlo según tu caso.
 
