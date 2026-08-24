@@ -137,6 +137,15 @@ verifica en producción en la fase 3. (Con web desde cero, el servidor se
 identifica igual — cabeceras, panel, documentación del hosting — en cuanto el
 usuario tenga hosting elegido, y antes de escribir estas reglas.)
 
+Y si la web usa URLs limpias con un catch-all de rewrite hacia un enrutador
+(`RewriteRule ^(.*)$ index.php?/$1 [L]`), el flag **QSA no es opcional**: esa
+regla construye una query nueva con la ruta y, sin `[L,QSA]`, **descarta la
+query string original** — cualquier `?parametro` de cualquier página muere ahí
+sin llegar a PHP. El síntoma engaña de verdad: la página responde 200 con y
+sin parámetro, idéntica, y parece un problema de caché que ninguna cabecera
+arregla. Cuando un parámetro GET «no funcione», comprueba el catch-all antes
+de culpar a la caché.
+
 ### Si el origen es WordPress
 
 La web actual es un WordPress y la nueva no lo será. Del inventario, di qué

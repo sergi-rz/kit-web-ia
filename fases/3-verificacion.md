@@ -38,6 +38,11 @@ Reglas:
   estado y los enlaces internos, y compara el peso de las imágenes críticas
   contra el inventario. Lo comprobado en vivo pesa más que lo deducido del
   código.
+- Si alguna página usa **parámetros GET** (un `?enviado` de formulario, un
+  token, un filtro), comprueba con peticiones reales que la respuesta CON el
+  parámetro difiere de la respuesta sin él. Si son idénticas, lo más probable
+  es que el catch-all del rewrite esté descartando la query string por falta
+  del flag QSA (ver fase 2) — no un problema de caché.
 - Comprueba las URLs de una en una contra la lista del inventario: código de
   estado de cada una y que el contenido corresponde. Las redirecciones del
   inventario siguen respondiendo 301 hacia su destino correcto.
