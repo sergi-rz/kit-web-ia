@@ -5,8 +5,8 @@ Code, Codex o equivalente — sin perder por el camino lo que hoy te trae
 visitas o dinero.
 
 Lo enseño en funcionamiento en este vídeo: **[Rehago mi web con IA sin tocar código ni perder lo que ya funciona](https://www.youtube.com/watch?v=ptXv8fTC2zM)**.
-Recomiendo verlo antes de usar el kit: cada proyecto tiene sus matices y ahí
-explico cómo aplicarlo según tu caso.
+Recomiendo verlo antes de usar el kit: ahí se ve qué pasa en cada fase y qué
+decisiones te va a pedir el agente por el camino.
 
 ## Cómo se usa
 
