@@ -97,7 +97,13 @@ reconstruirlo desde DECISIONES.md.
 
 1. **Todo lo del inventario se conserva** (con la única excepción de lo que
    esté en CAMBIOS APROBADOS).
-2. **Las URLs se quedan exactamente iguales**, en todos los idiomas.
+2. **Las URLs se quedan exactamente iguales**, en todos los idiomas. Y
+   conservarlas significa **responder en ellas**, no redirigirlas: el
+   enrutado de la web nueva se moldea al formato de URL de la vieja tal cual
+   (extensiones, barras finales, esquema de idiomas incluidos), aunque por
+   dentro la web funcione distinto. Una redirección 301 es el último recurso,
+   reservado a lo que el usuario haya aprobado no conservar — nunca la manera
+   de encajar las URLs viejas en un enrutado que «prefería» otro formato.
 3. **Los textos no se reescriben.** El diseño nuevo se monta con el contenido
    real. Si un bloque nuevo necesita un texto que no existe, no te lo
    inventes: márcalo PENDIENTE y propón el texto aparte. (Con web desde cero:

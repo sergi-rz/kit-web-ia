@@ -50,8 +50,9 @@ para un hosting compartido normal.
 
 No es para ti si publicas contenido a diario desde un panel de administración
 y no piensas usar la IA para editarlo, si otras personas no técnicas necesitan
-editar la web, o si tienes una tienda con cientos de productos gestionada
-desde un backoffice.
+editar la web, o si tienes una tienda online — da igual que venda un producto
+o cientos: carrito y pedidos necesitan otra base. Cobrar una reserva o una
+sesión sí entra; un catálogo con carrito, no.
 
 Y que nadie se confunda: este kit no te hace el trabajo de SEO. Lo que evita
 es lo contrario — la web bonita sin base que te saca un prompt vago de una

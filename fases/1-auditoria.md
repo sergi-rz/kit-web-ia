@@ -77,8 +77,10 @@ averías de la web actual, no puntos a conservar.
 
 1. **URLs.** Lista todas las URLs de la web (sitemap, enlaces internos, y las
    que encuentres en el código). Esta lista es sagrada: en el rediseño se
-   conservan todas. Si alguna no se pudiera conservar, necesitará una
-   redirección 301.
+   conservan todas, y conservar significa que la web nueva **responderá en
+   ellas tal cual** (su enrutado se moldea a este formato de URL; ver las
+   reglas de la fase 2), no que se redirigen. El 301 queda para lo que el
+   usuario apruebe expresamente no conservar.
 2. **Redirecciones existentes.** Busca redirecciones ya configuradas
    (.htaccess, configuración del servidor, código), y anota en qué mecanismo
    vive cada una (ver Parte 2b). Se pierden en casi todos los rediseños y

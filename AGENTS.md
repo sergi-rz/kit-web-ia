@@ -118,5 +118,7 @@ más bonita.
 Antes de empezar, el agente lo comprueba con el usuario: si publica contenido
 a diario desde un panel de administración y no piensa usar la IA para
 editarlo, si otras personas no técnicas necesitan editar la web, o si es una
-tienda con cientos de productos gestionada desde un backoffice — este kit no
-es el camino, y hay que decírselo antes de que invierta tiempo, no después.
+tienda online — da igual que venda un producto o cientos: carrito, pedidos y
+su gestión necesitan otra base (cobrar una reserva o una sesión sí entra; un
+catálogo con carrito, no) — este kit no es el camino, y hay que decírselo
+antes de que invierta tiempo, no después.
